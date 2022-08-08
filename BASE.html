@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang=ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  {CanonicalTag}
+  {block:ItemPage}
+  {MetaItemInfoTag}
+  {/block:ItemPage}
+
+  {block:NotItemPage}
+  {MetaShopInfoTag}
+  {/block:NotItemPage}
+
+  {block:IndexPage}
+  {HeadLinkNextPrevTag}
+  {/block:IndexPage}
+  <!-- favicon -->
+  {FaviconTag}
+  <title>
+    {block:NotBlogPage}{PageTitle}{/block:NotBlogPage}
+    {block:BlogPage}NEWS | {ShopName}{/block:BlogPage}
+  </title>
+  <!-- icon -->
+  <script src="https://kit.fontawesome.com/eef91d5f84.js" crossorigin="anonymous"></script>
+  <!-- style -->
+  <!-- 1.リセットCSS -->
+  <link rel="stylesheet" href="">
+  <!-- 2.スリックCSS -->
+  <link rel="stylesheet" href="">
+  <!-- 3.スリックテーマCSS -->
+  <link rel="stylesheet" href="">
+  <!-- 4.スタイルCSS -->
+  <link rel="stylesheet" href="">
+
+  {BackgroundTag}
+  <!-- script -->
+  {JQueryTag}
+  {GoogleAnalyticsTag}
+
+  <!-- base variables-->
+  {block:hidden}
+  <meta name="text:Slider1" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="スライダー用画像URL1">
+  <meta name="text:Slider1 url" content="" label="スライダー用URL1">
+  <meta name="text:Slider2" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="スライダー用画像URL2">
+  <meta name="text:Slider2 url" content="" label="スライダー用URL2">
+  <meta name="text:Slider3" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="スライダー用画像URL3">
+  <meta name="text:Slider3 url" content="" label="スライダー用URL3">
+  <meta name="text:Slider4" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="スライダー用画像URL4">
+  <meta name="text:Slider4 url" content="" label="スライダー用URL4">
+  <meta name="text:Slider5" content="" label="スライダー用画像URL5">
+  <meta name="text:Slider5 url" content="" label="スライダー用URL5">
+  <meta name="text:Slider6" content="" label="スライダー用画像URL6">
+  <meta name="text:Slider6 url" content="" label="スライダー用URL6">
+
+  <meta name="text:Feature1 caption" content="特集キャプション1" label="特集1キャプション">
+  <meta name="text:Feature1 url" content="特集url1" label="特集1URL">
+  <meta name="image:Feature1 img" content="" label="特集1サムネイル">
+  <meta name="text:Feature2 caption" content="" label="特集2キャプション">
+  <meta name="text:Feature2 url" content="特集url2" label="特集2URL">
+  <meta name="image:Feature2 img" content="" label="特集2サムネイル">
+  <meta name="text:Feature3 caption" content="" label="特集3キャプション">
+  <meta name="text:Feature3 url" content="特集url3" label="特集3URL">
+  <meta name="image:Feature3 img" content="" label="特集3サムネイル">
+  <meta name="text:Feature4 caption" content="" label="特集4キャプション">
+  <meta name="text:Feature4 url" content="特集url4" label="特集4URL">
+  <meta name="image:Feature4 img" content="" label="特集4サムネイル">
+  <meta name="text:Feature5 caption" content="" label="特集5キャプション">
+  <meta name="text:Feature5 url" content="特集url5" label="特集5URL">
+  <meta name="image:Feature5 img" content="" label="特集5サムネイル">
+  <meta name="text:Feature6 caption" content="" label="特集6キャプション">
+  <meta name="text:Feature6 url" content="特集url6" label="特集6URL">
+  <meta name="image:Feature6 img" content="" label="特集6サムネイル">
+
+  <meta name="text:Category name 1" content="Category1" label="カテゴリ1英語名">
+  <meta name="text:Category name 1 jp" content="カテゴリ1" label="カテゴリ1日本語名">
+  <meta name="text:Category url 1" content="" label="カテゴリ1URL">
+  <meta name="text:Category img 1" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="カテゴリ1用画像URL">
+  <meta name="text:Category name 2" content="Category2" label="カテゴリ2英語名">
+  <meta name="text:Category name 2 jp" content="カテゴリ2" label="カテゴリ2日本語名">
+  <meta name="text:Category url 2" content="" label="カテゴリ2URL">
+  <meta name="text:Category img 2" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="カテゴリ2用画像URL">
+  <meta name="text:Category name 3" content="Category3" label="カテゴリ3英語名">
+  <meta name="text:Category name 3 jp" content="カテゴリ3" label="カテゴリ3日本語名">
+  <meta name="text:Category url 3" content="" label="カテゴリ3URL">
+  <meta name="text:Category img 3" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="カテゴリ3用画像URL">
+  <meta name="text:Category name 4" content="Category4" label="カテゴリ4英語名">
+  <meta name="text:Category name 4 jp" content="カテゴリ4" label="カテゴリ4日本語名">
+  <meta name="text:Category url 4" content="" label="カテゴリ4URL">
+  <meta name="text:Category img 4" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="カテゴリ4用画像URL">
+  <meta name="text:Category name 5" content="Category5" label="カテゴリ5英語名">
+  <meta name="text:Category name 5 jp" content="カテゴリ5" label="カテゴリ5日本語名">
+  <meta name="text:Category url 5" content="" label="カテゴリ5URL">
+  <meta name="text:Category img 5" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="カテゴリ5用画像URL">
+  <meta name="text:Category name 6" content="Category6" label="カテゴリ6英語名">
+  <meta name="text:Category name 6 jp" content="カテゴリ6" label="カテゴリ6日本語名">
+  <meta name="text:Category url 6" content="" label="カテゴリ6URL">
+  <meta name="text:Category img 6" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="カテゴリ6用画像URL">
+
+  <meta name="text:Ondemand1 img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="オンデマンド1画像URL">
+  <meta name="text:Ondemand1 url" content="" label="オンデマンド1URL">
+  <meta name="text:Ondemand1 name" content="オンデマンド1" label="オンデマンド1名前">
+  <meta name="text:Ondemand2 img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="オンデマンド2画像URL">
+  <meta name="text:Ondemand2 url" content="" label="オンデマンド2URL">
+  <meta name="text:Ondemand2 name" content="オンデマンド2" label="オンデマンド2名前">
+  <meta name="text:Ondemand3 img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="オンデマンド3画像URL">
+  <meta name="text:Ondemand3 url" content="" label="オンデマンド3URL">
+  <meta name="text:Ondemand3 name" content="オンデマンド3" label="オンデマンド3名前">
+  <meta name="text:Ondemand4 img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="オンデマンド4画像URL">
+  <meta name="text:Ondemand4 url" content="" label="オンデマンド4URL">
+  <meta name="text:Ondemand4 name" content="オンデマンド4" label="オンデマンド4名前">
+  <meta name="text:Ondemand5 img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="オンデマンド5画像URL">
+  <meta name="text:Ondemand5 url" content="" label="オンデマンド5URL">
+  <meta name="text:Ondemand5 name" content="オンデマンド5" label="オンデマンド5名前">
+  <meta name="text:Ondemand6 img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="オンデマンド6画像URL">
+  <meta name="text:Ondemand6 url" content="" label="オンデマンド6URL">
+  <meta name="text:Ondemand6 name" content="オンデマンド6" label="オンデマンド6名前">
+
+  <meta name="text:Portfolio1 title" content="ポートフォリオ1" label="ポートフォリオ1タイトル">
+  <meta name="text:Portfolio1 description" content="ポートフォリオ1説明" label="ポートフォリオ1説明">
+  <meta name="text:Portfolio1 url" content="" label="ポートフォリオ1URL">
+  <meta name="image:Portfolio1 img" content="" label="ポートフォリオ1画像">
+  <meta name="text:Portfolio2 title" content="ポートフォリオ2" label="ポートフォリオ2タイトル">
+  <meta name="text:Portfolio2 description" content="ポートフォリオ2説明" label="ポートフォリオ2説明">
+  <meta name="text:Portfolio2 url" content="" label="ポートフォリオ2URL">
+  <meta name="image:Portfolio2 img" content="" label="ポートフォリオ2画像">
+  <meta name="text:Portfolio3 title" content="ポートフォリオ3" label="ポートフォリオ3タイトル">
+  <meta name="text:Portfolio3 description" content="ポートフォリオ3説明" label="ポートフォリオ3説明">
+  <meta name="text:Portfolio3 url" content="" label="ポートフォリオ3URL">
+  <meta name="image:Portfolio3 img" content="" label="ポートフォリオ3画像">
+  <meta name="text:Portfolio4 title" content="ポートフォリオ4" label="ポートフォリオ4タイトル">
+  <meta name="text:Portfolio4 description" content="ポートフォリオ4説明" label="ポートフォリオ4説明">
+  <meta name="text:Portfolio4 url" content="" label="ポートフォリオ4URL">
+  <meta name="image:Portfolio4 img" content="" label="ポートフォリオ4画像">
+  <meta name="text:Portfolio5 title" content="ポートフォリオ5" label="ポートフォリオ5タイトル">
+  <meta name="text:Portfolio5 description" content="ポートフォリオ5説明" label="ポートフォリオ5説明">
+  <meta name="text:Portfolio5 url" content="" label="ポートフォリオ5URL">
+  <meta name="image:Portfolio5 img" content="" label="ポートフォリオ5画像">
+  <meta name="text:Portfolio6 title" content="ポートフォリオ6" label="ポートフォリオ6タイトル">
+  <meta name="text:Portfolio6 description" content="ポートフォリオ6説明" label="ポートフォリオ6説明">
+  <meta name="text:Portfolio6 url" content="" label="ポートフォリオ6URL">
+  <meta name="image:Portfolio6 img" content="" label="ポートフォリオ6画像">
+  <meta name="text:Portfolio7 title" content="ポートフォリオ7" label="ポートフォリオ7タイトル">
+  <meta name="text:Portfolio7 description" content="ポートフォリオ7説明" label="ポートフォリオ7説明">
+  <meta name="text:Portfolio7 url" content="" label="ポートフォリオ7URL">
+  <meta name="image:Portfolio7 img" content="" label="ポートフォリオ7画像">
+  <meta name="text:Portfolio8 title" content="ポートフォリオ8" label="ポートフォリオ8タイトル">
+  <meta name="text:Portfolio8 description" content="ポートフォリオ8説明" label="ポートフォリオ8説明">
+  <meta name="text:Portfolio8 url" content="" label="ポートフォリオ8URL">
+  <meta name="image:Portfolio8 img" content="" label="ポートフォリオ8画像">
+  <meta name="text:Portfolio9 title" content="ポートフォリオ9" label="ポートフォリオ9タイトル">
+  <meta name="text:Portfolio9 description" content="ポートフォリオ9説明" label="ポートフォリオ9説明">
+  <meta name="text:Portfolio9 url" content="" label="ポートフォリオ9URL">
+  <meta name="image:Portfolio9 img" content="" label="ポートフォリオ9画像">
+
+  <meta name="text:About img" content="1Uo0Wi45rE4CA2tBGcL9o7cOWPO1pAwCN" label="ABOUTページ画像">
+  <meta name="text:Catchcopy" content="キャッチコピー" label="キャッチコピー">
+  {/block:hidden}
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="{IndexPageURL}">
+            <h1>
+              {LogoTag}
+            </h1>
+          </a>
+        </div>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li class="menu-item">
+              <a href="{AboutPageURL}">ABOUT</a>
+            </li>
+            <li class="menu-item cnav">
+              <a>PRODUCT</a>
+              <div class="subnav">
+                <ul>
+                  {block:AppsItemCategoryCategories}
+                  <li><a href="{AppsItemCategoryCategoryPageURL}">{AppsItemCategoryCategoryName}</a></li>
+                  {/block:AppsItemCategoryCategories}
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item">
+              <a href="/#Ondemand">ONDEMAND</a>
+            </li>
+            <li class="menu-item">
+              <a href="/#ProducedByMe">by ME</a>
+            </li>
+            {block:AppsBlog}
+            <li class="menu-item">
+              <a href="{BlogPageURL}">NEWS</a>
+            </li>
+            {/block:AppsBlog}
+            <li class="menu-item">
+              <a href="{ContactPageURL}">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <aside>
+          <ul class="header-menu">
+            <li class="menu-item">
+              {BASEMenuTag}
+            </li>
+          </ul>
+        </aside>
+        <div class="switch">
+          <button class="drawer-hamburger">
+            <span class="drawer-hamburger-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="top_page">
+        {block:IndexPage}
+        <!-- ========== Start hero ========== -->
+        {block:text-Slider1}
+        <div class="hero-pc">
+          <div>
+            <a href="{text:Slider1 url}">
+              <img src="https://drive.google.com/uc?id={text:Slider1}&usp=sharing" alt="">
+            </a>
+          </div>
+          {block:text-Slider2}
+          <div>
+            <a href="{text:Slider2 url}">
+              <img src="https://drive.google.com/uc?id={text:Slider2}&usp=sharing" alt="">
+            </a>
+          </div>
+          {/block:text-Slider2}
+          {block:text-Slider3}
+          <div>
+            <a href="{text:Slider3 url}">
+              <img src="https://drive.google.com/uc?id={text:Slider3}&usp=sharing" alt="">
+            </a>
+          </div>
+          {/block:text-Slider3}
+          {block:text-Slider4}
+          <div>
+            <a href="{text:Slider4 url}">
+              <img src="https://drive.google.com/uc?id={text:Slider4}&usp=sharing" alt="">
+            </a>
+          </div>
+          {/block:text-Slider4}
+          {block:text-Slider5}
+          <div>
+            <a href="{text:Slider5 url}">
+              <img src="https://drive.google.com/uc?id={text:Slider5}&usp=sharing" alt="">
+            </a>
+          </div>
+          {/block:text-Slider5}
+          {block:text-Slider6}
+          <div>
+            <a href="{text:Slider6 url}">
+              <img src="https://drive.google.com/uc?id={text:Slider6}&usp=sharing" alt="">
+            </a>
+          </div>
+          {/block:text-Slider6}
+        </div>
+        {/block:text-Slider1}
+        <!-- ========== End hero ========== -->
+
+        <!-- ========== Start Feature ========== -->
+        <section id="Feature">
+          <div class="title-wrap">
+            <h2 class="section-title">Feature</h2>
+            <p class="section-description">特集</p>
+          </div>
+          <ul class="feature-wrap">
+            <li class="feature_item ani">
+              <a href="{text:Feature1 url}">
+                <img src="{image:Feature1 img}" alt="{text:Feature1 caption}">
+                <p class="detail">{text:Feature1 caption}</p>
+              </a>
+            </li>
+            {block:text-Feature2_caption}
+            <li class="feature_item ani">
+              <a href="{text:Feature2 url}">
+                <img src="{image:Feature2 img}" alt="{text:Feature2 caption}">
+                <p class="detail">{text:Feature2 caption}</p>
+              </a>
+            </li>
+            {/block:text-Feature2_caption}
+            {block:text-Feature3_caption}
+            <li class="feature_item ani">
+              <a href="{text:Feature3 url}">
+                <img src="{image:Feature3 img}" alt="{text:Feature3 caption}">
+                <p class="detail">{text:Feature3 caption}</p>
+              </a>
+            </li>
+            {/block:text-Feature3_caption}
+            {block:text-Feature4_caption}
+            <li class="feature_item ani">
+              <a href="{text:Feature4 url}">
+                <img src="{image:Feature4 img}" alt="{text:Feature4 caption}">
+                <p class="detail">{text:Feature4 caption}</p>
+              </a>
+            </li>
+            {/block:text-Feature4_caption}
+            {block:text-Feature5_caption}
+            <li class="feature_item ani">
+              <a href="{text:Feature5 url}">
+                <img src="{image:Feature5 img}" alt="{text:Feature5 caption}">
+                <p class="detail">{text:Feature5 caption}</p>
+              </a>
+            </li>
+            {/block:text-Feature5_caption}
+            {block:text-Feature6_caption}
+            <li class="feature_item ani">
+              <a href="{text:Feature6 url}">
+                <img src="{image:Feature6 img}" alt="{text:Feature6 caption}">
+                <p class="detail">{text:Feature6 caption}</p>
+              </a>
+            </li>
+            {/block:text-Feature6_caption}
+
+          </ul>
+        </section>
+        <!-- ========== End Feature ========== -->
+
+        <!-- ========== Start Product ========== -->
+        <section id="Product">
+          <div class="title-wrap">
+            <h2 class="section-title">Product</h2>
+            <p class="section-description">カテゴリ一覧</p>
+          </div>
+          <div class="product-wrap">
+            <div class="row ani">
+              <a href="{text:Category url 1}">
+                <img src="https://drive.google.com/uc?id={text:Category img 1}&usp=sharing" alt="">
+                <div class="detail">
+                  <h3 class="product-ctgr">{text:Category name 1}</h3>
+                  <p class="product-ctgr_jp">{text:Category name 1 jp}</p>
+                </div>
+              </a>
+            </div>
+            <div class="row">
+              <div class="child ani">
+                <a href="{text:Category url 2}">
+                  <img src="https://drive.google.com/uc?id={text:Category img 2}&usp=sharing" alt="">
+                  <div class="detail">
+                    <h3 class="product-ctgr">{text:Category name 2}</h3>
+                    <p class="product-ctgr_jp">{text:Category name 2 jp}</p>
+                  </div>
+                </a>
+              </div>
+              <div class="child ani">
+                <a href="{text:Category url 3}">
+                  <img src="https://drive.google.com/uc?id={text:Category img 3}&usp=sharing" alt="">
+                  <div class="detail">
+                    <h3 class="product-ctgr">{text:Category name 3}</h3>
+                    <p class="product-ctgr_jp">{text:Category name 3 jp}</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="row ani">
+              <a href="{text:Category url 4}">
+                <img src="https://drive.google.com/uc?id={text:Category img 4}&usp=sharing" alt="">
+                <div class="detail">
+                  <h3 class="product-ctgr">{text:Category name 4}</h3>
+                  <p class="product-ctgr_jp">{text:Category name 4 jp}</p>
+                </div>
+              </a>
+            </div>
+            <div class="row ani">
+              <a href="{text:Category url 5}">
+                <img src="https://drive.google.com/uc?id={text:Category img 5}&usp=sharing" alt="">
+                <div class="detail">
+                  <h3 class="product-ctgr">{text:Category name 5}</h3>
+                  <p class="product-ctgr_jp">{text:Category name 5 jp}</p>
+                </div>
+              </a>
+            </div>
+            <div class="row ani">
+              <a href="{text:Category url 6}">
+                <img src="https://drive.google.com/uc?id={text:Category img 6}&usp=sharing" alt="">
+                <div class="detail">
+                  <h3 class="product-ctgr">{text:Category name 6}</h3>
+                  <p class="product-ctgr_jp">{text:Category name 6 jp}</p>
+                </div>
+              </a>
+            </div>
+        </section>
+        <!-- ========== End Product ========== -->
+
+        <!-- ========== Start Ondemand ========== -->
+        <section id="Ondemand">
+          <div class="title-wrap">
+            <h2 class="section-title">Support</h2>
+            <p class="section-description">オリジナルのご依頼も承ります。</p>
+          </div>
+          <ul class="support-wrap">
+            <li class="ani">
+              <a href="{text:Ondemand1 url}">
+                <img src="https://drive.google.com/uc?id={text:Ondemand1 img}&usp=sharing" alt="">
+                <h3 class="">{text:Ondemand1 name}</h3>
+              </a>
+            </li>
+            {block:text-Ondemand2_name}
+            <li class="ani">
+              <a href="{text:Ondemand2 url}">
+                <img src="https://drive.google.com/uc?id={text:Ondemand2 img}&usp=sharing" alt="">
+                <h3 class="">{text:Ondemand2 name}</h3>
+              </a>
+            </li>
+            {/block:text-Ondemand2_name}
+            {block:text-Ondemand3_name}
+            <li class="ani">
+              <a href="{text:Ondemand3 url}">
+                <img src="https://drive.google.com/uc?id={text:Ondemand3 img}&usp=sharing" alt="">
+                <h3 class="">{text:Ondemand3 name}</h3>
+              </a>
+            </li>
+            {/block:text-Ondemand3_name}
+            {block:text-Ondemand4_name}
+            <li class="ani">
+              <a href="{text:Ondemand4 url}">
+                <img src="https://drive.google.com/uc?id={text:Ondemand4 img}&usp=sharing" alt="">
+                <h3 class="">{text:Ondemand4 name}</h3>
+              </a>
+            </li>
+            {/block:text-Ondemand4_name}
+            {block:text-Ondemand5_name}
+            <li class="ani">
+              <a href="{text:Ondemand5 url}">
+                <img src="https://drive.google.com/uc?id={text:Ondemand5 img}&usp=sharing" alt="">
+                <h3 class="">{text:Ondemand5 name}</h3>
+              </a>
+            </li>
+            {/block:text-Ondemand5_name}
+            {block:text-Ondemand6_name}
+            <li class="ani">
+              <a href="{text:Ondemand6 url}">
+                <img src="https://drive.google.com/uc?id={text:Ondemand6 img}&usp=sharing" alt="">
+                <h3 class="">{text:Ondemand6 name}</h3>
+              </a>
+            </li>
+            {/block:text-Ondemand6_name}
+          </ul>
+        </section>
+        <!-- ========== End Ondemand ========== -->
+
+        <!-- ========== Start Produced ========== -->
+        <section id="ProducedByMe">
+          <div class="title-wrap">
+            <h2 class="section-title">Produced by ME</h2>
+            <p class="section-description">手がけた作品の一部をご紹介</p>
+          </div>
+          <ul class="produced-wrap">
+            <li class="ani">
+              <a href="{text:Portfolio1 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio1 img}" alt="">
+                  <p>{text:Portfolio1 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio1 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {block:text-Portfolio2_title}
+            <li class="ani">
+              <a href="{text:Portfolio2 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio2 img}" alt="">
+                  <p>{text:Portfolio2 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio2 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio2_title}
+            {block:text-Portfolio3_title}
+            <li class="ani">
+              <a href="{text:Portfolio3 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio3 img}" alt="">
+                  <p>{text:Portfolio3 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio3 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio3_title}
+            {block:text-Portfolio4_title}
+            <li class="ani">
+              <a href="{text:Portfolio4 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio4 img}" alt="">
+                  <p>{text:Portfolio4 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio4 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio4_title}
+            {block:text-Portfolio5_title}
+            <li class="ani">
+              <a href="{text:Portfolio5 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio5 img}" alt="">
+                  <p>{text:Portfolio5 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio5 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio5_title}
+            {block:text-Portfolio6_title}
+            <li class="ani">
+              <a href="{text:Portfolio6 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio6 img}" alt="">
+                  <p>{text:Portfolio6 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio6 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio6_title}
+            {block:text-Portfolio7_title}
+            <li class="ani">
+              <a href="{text:Portfolio7 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio7 img}" alt="">
+                  <p>{text:Portfolio7 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio7 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio7_title}
+            {block:text-Portfolio8_title}
+            <li class="ani">
+              <a href="{text:Portfolio8 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio8 img}" alt="">
+                  <p>{text:Portfolio8 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio8 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio8_title}
+            {block:text-Portfolio9_title}
+            <li class="ani">
+              <a href="{text:Portfolio9 url}" target="_blank">
+                <div class="description">
+                  <img src="{image:Portfolio9 img}" alt="">
+                  <p>{text:Portfolio9 description}</p>
+                </div>
+                <h3 class="logo">{text:Portfolio9 title}</h3>
+                <div class="icon"><i class="fas fa-external-link-alt"></i></div>
+              </a>
+            </li>
+            {/block:text-Portfolio9_title}
+          </ul>
+          <div class="more">
+            <a href="https://d12242pd.wixsite.com/yosuke-xyz">VIEW MORE</a>
+          </div>
+        </section>
+        <!-- ========== End Produced ========== -->
+
+        <!-- ========== Start Information ========== -->
+        <section id="Information">
+          <div class="title-wrap">
+            <h2 class="section-title">Information</h2>
+            <p class="section-description">お知らせ</p>
+          </div>
+          <div class="info-wrap">
+            <ul class="list_info">
+            </ul>
+            <div class="more">
+              <a href="{BlogPageURL}">VIEW MORE</a>
+            </div>
+          </div>
+        </section>
+        <!-- ========== End Information ========== -->
+
+        <!-- ========== Start Gallary ========== -->
+        <section id="Gallary">
+          <div class="title-wrap">
+            <h2 class="section-title">Gallary</h2>
+            <p class="section-description">ギャラリー</p>
+          </div>
+          <ul class="gallary-wrap">
+
+          </ul>
+          <div class="more">
+            <a href="https://www.instagram.com/{ShopInstagramId}">VIEW MORE</a>
+          </div>
+        </section>
+        <!-- ========== End Gallary ========== -->
+        {/block:IndexPage}
+      </div>
+
+      <div id="shop_page">
+        <!-- ========== Start About Page ========== -->
+        {block:AboutPage}
+        <section id="About">
+          <div class="title-wrap">
+            <h2 class="section-title">About</h2>
+            <p class="section-description">ヨコチヨウスケ</p>
+          </div>
+          <div class="introduction">
+            <img src="https://drive.google.com/uc?id={text:About img}&usp=sharing" alt="プロフィール画像" class="ani">
+            <div>
+              <h3>{text:Catchcopy}</h3>
+              <p>{ShopIntroduction}</p>
+            </div>
+          </div>
+        </section>
+        {/block:AboutPage}
+        <!-- ========== End About Page ========== -->
+
+        <!-- ========== Start Category Page ========== -->
+        {block:IndexPageCategory}
+        <section id="categoryPage">
+          <div class="title-wrap">
+            <h2 class="section-title">{IndexPageCategory}</h2>
+          </div>
+          <div class="items">
+            {block:Items}
+            <div class="item ani">
+              <a href="{ItemDeepLink}">
+                <img src="{ItemImage1URL-300}" alt="">
+                <h2>{ItemTitle}</h2>
+                <p>{ItemPrice}</p>
+              </a>
+            </div>
+            {/block:Items}
+          </div>
+        </section>
+        {/block:IndexPageCategory}
+        <!-- ========== End Category Page ========== -->
+
+        <!-- ========== Start Item Page ========== -->
+        {block:ItemPage}
+        <section class="itemPage">
+          <div class="item-catch">
+            <div class="item-detail">
+              <h2>{ItemTitle}</h2>
+              <dl class="item-spec">
+                {block:ItemDigitalContent}
+                <dt>FILE</dt>
+                <dd>{ItemDigitalContent}</dd>
+                {/block:ItemDigitalContent}
+                <dt>PRICE</dt>
+                {block:HasItemProperPrice}
+                <dd class="price-set">
+                  <div>
+                    <p class="price proper">{ItemProperPrice}</p>
+                    <p class="price discount">{ItemPrice}</p>
+                  </div>
+                  <div class="price rate">{ItemDiscountRate}</div>
+                </dd>
+                {/block:HasItemProperPrice}
+                {block:NoItemProperPrice}
+                <dd class="price-set">
+                  <div class="price">{ItemPrice}</div>
+                </dd>
+                {/block:NoItemProperPrice}
+              </dl>
+              {block:PurchaseForm}
+              {ItemSelectTag}
+              {PurchaseButton}
+              {/block:PurchaseForm}
+              {ItemAttentionTag}
+              {IllegalReportTag}
+            </div>
+            <div class="item-photos ani">
+              <img src="{ItemImage1URL-origin}" alt="">
+              {block:ItemImage2}
+              <img src="{ItemImage2URL-origin}" alt="">
+              {/block:ItemImage2}
+              {block:ItemImage3}
+              <img src="{ItemImage3URL-origin}" alt="">
+              {/block:ItemImage3}
+              {block:ItemImage4}
+              <img src="{ItemImage4URL-origin}" alt="">
+              {/block:ItemImage4}
+              {block:ItemImage5}
+              <img src="{ItemImage5URL-origin}" alt="">
+              {/block:ItemImage5}
+              {block:ItemImage6}
+              <img src="{ItemImage6URL-origin}" alt="">
+              {/block:ItemImage6}
+            </div>
+          </div>
+          <div class="item-description">
+            <p class="item-heading">{ItemDetail}</p>
+            {block:AppsItemDetailCustom}
+            {AdditionalItemDetail}
+            {/block:AppsItemDetailCustom}
+          </div>
+        </section>
+        {/block:ItemPage}
+        <!-- ========== End Item Page ========== -->
+
+        <!-- ========== Start Contact ========== -->
+        {block:ContactPage}
+        {PageContents}
+        {/block:ContactPage}
+        <!-- ========== End Contact ========== -->
+
+        <!-- ========== Start Privacy Page ========== -->
+        {block:PrivacyPage}
+        <section id="privacyPage" class="pageContents">
+          {PageContents}
+        </section>
+        {/block:PrivacyPage}
+        <!-- ========== End Privacy Page ========== -->
+
+        <!-- ========== Start Law Page ========== -->
+        {block:LawPage}
+        <section id="lawPage" class="pageContents">
+          {PageContents}
+        </section>
+        {/block:LawPage}
+        <!-- ========== End Law Page ========== -->
+
+        <!-- ========== Start News Page ========== -->
+        {block:AppsBlog}
+        {block:BlogPage}
+        <section id="blogPage">
+          <div class="title-wrap">
+            <h2 class="section-title">NEWS</h2>
+            <p class="section-description">最新のお知らせ</p>
+          </div>
+          {PageContents}
+          <div class="backTo more">
+            <a href="{BlogPageURL}">お知らせ一覧</a>
+          </div>
+        </section>
+        {/block:BlogPage}
+        {/block:AppsBlog}
+        <!-- ========== End News Page ========== -->
+      </div>
+    </main>
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer-logo">
+          <a href="/">
+            {LogoTag}
+          </a>
+        </div>
+        <nav class="footer-nav">
+          <div>
+            <h2>PRODUCT</h2>
+            <ul>
+              {block:AppsItemCategoryCategories}
+              <li><a href="{AppsItemCategoryCategoryPageURL}">{AppsItemCategoryCategoryName}</a></li>
+              {/block:AppsItemCategoryCategories}
+            </ul>
+          </div>
+          <div>
+            <h2>ONDEMAND</h2>
+            <ul>
+              <li>
+                <a href="{text:Ondemand1 url}">{text:Ondemand1 name}</a>
+              </li>
+              {block:text-Ondemand2_name}
+              <li>
+                <a href="{text:Ondemand2 url}">{text:Ondemand2 name}</a>
+              </li>
+              {/block:text-Ondemand2_name}
+              {block:text-Ondemand3_name}
+              <li>
+                <a href="{text:Ondemand3 url}">{text:Ondemand3 name}</a>
+              </li>
+              {/block:text-Ondemand3_name}
+              {block:text-Ondemand4_name}
+              <li>
+                <a href="{text:Ondemand4 url}">{text:Ondemand4 name}</a>
+              </li>
+              {/block:text-Ondemand4_name}
+              {block:text-Ondemand5_name}
+              <li>
+                <a href="{text:Ondemand5 url}">{text:Ondemand5 name}</a>
+              </li>
+              {/block:text-Ondemand5_name}
+              {block:text-Ondemand6_name}
+              <li>
+                <a href="{text:Ondemand6 url}">{text:Ondemand6 name}</a>
+              </li>
+              {/block:text-Ondemand6_name}
+            </ul>
+          </div>
+          <div>
+            <h2>ABOUT</h2>
+            <ul>
+              <li>
+                <a href="{AboutPageURL}">プロフィール</a>
+              </li>
+              <li>
+                <a href="https://d12242pd.wixsite.com/yosuke-xyz">ポートフォリオ</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="other">
+            <ul>
+              <li>
+                <a href="{ContactPageURL}">お問い合わせ</a>
+              </li>
+              <li>
+                <a href="{PrivacyPageURL}">プライバシーポリシー</a>
+              </li>
+              <li>
+                <a href="{LawPageURL}">特商法に基づく表記</a>
+              </li>
+            </ul>
+            <div class="others">
+              <ul>
+                <li>
+                  <a href="https://www.instagram.com/{ShopInstagramId}"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="{ShopYoutubeId}"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/{ShopTwitterId}"><i class="fab fa-twitter-square"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <!-- script -->
+
+  <!-- 5.スリックjs -->
+  <script src="" type="text/javascript"
+    charset="utf-8"></script>
+  <!-- 6.スクリプトjs -->
+  <script src=""
+    type="text/javascript"></script>
+  <script>
+    $(function () {
+      if (location.host == "{ShopDomain}") {
+        $.ajax({
+          url: '{BlogFeedPageURL}',
+          type: 'GET',
+          dataType: 'xml',
+        })
+          .done(function (data) {
+            i = 1;
+            $('item', data).each(function () {
+              let link = $('link', this).text();
+              let title = $('title', this).text();
+              let date = new Date($('pubDate', this).text());
+              let year = date.getFullYear();
+              let month = ('00' + (date.getMonth() + 1)).slice(-2);
+              let day = ('00' + date.getDate()).slice(-2);
+              let dateStr = `${year}.${month}.${day}`;
+              let blog_content = `<li><a href="${link}"><div class="item-heading"><time datetime="${year}-${month}-${day}">${dateStr}</time><p>INFORMATION</p></div><p>${title}</p></a></li>`;
+              $('.list_info').append(blog_content);
+              if (i >= 3) {
+                return false;
+              }
+              i++;
+            });
+          });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
